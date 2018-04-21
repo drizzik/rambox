@@ -174,6 +174,7 @@ body {
 .x-badge {
 	position: relative;
 	overflow: visible;
+	transform: rotate(90deg);
 }
 
 .x-badge[data-badge-text]:after {
@@ -237,6 +238,16 @@ body {
 	right: 16px;
 }
 
+.x-tab-bar-vertical>.x-tab-bar-body-default {
+    min-width: 54px !important;
+}
+
+.x-tab-wrap{
+	    transform: rotate(90deg);
+}
+.x-tab-bar-default-left.x-tab-bar-body-default {
+    padding: 6px 6px 6px 1px;
+}
 .x-tab{margin-left: -5px;}
 
 // Allow Glyphs in Action Columns
