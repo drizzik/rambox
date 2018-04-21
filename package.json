@@ -26,8 +26,8 @@
 		"build:win32": "build --win --ia32",
 		"build:win64": "build --win --x64",
 		"setup:osx": "npm run sencha:clean && npm run sencha:compile && npm run clean:osx && npm run pack:osx && npm run build:osx",
-		"setup:win": "npm run sencha:clean && npm run sencha:compile && npm run clean:win && npm run pack:win && npm run build:win",
-		"all:win": "npm run sencha:clean && npm run sencha:compile && npm run clean:win && npm run pack:win && npm run zip:win32 && npm run zip:win64 && npm run build:win",
+		"setup:win": "npm run sencha:clean && npm run sencha:compile && npm run clean:win && npm run pack:win && npm run build:win64",
+		"all:win": "npm run sencha:clean && npm run sencha:compile && npm run clean:win && npm run pack:win && npm run zip:win32 && npm run zip:win64 && npm run build:win64",
 		"all:linux": "npm run sencha:clean && npm run sencha:compile && npm run build:linux"
 	},
 	"build": {
@@ -82,9 +82,9 @@
 			]
 		},
 		"snap": {
- 			"confinement": "strict",
- 			"grade": "stable"
-      		},
+			"confinement": "strict",
+			"grade": "stable"
+		},
 		"directories": {
 			"buildResources": "resources/installer/",
 			"output": "dist/",
@@ -99,6 +99,7 @@
 		"electron": "^1.8.3",
 		"electron-builder": "^17.10.0",
 		"electron-builder-squirrel-windows": "15.0.0",
+		"electron-prebuilt": "^1.4.13",
 		"electron-squirrel-startup": "^1.0.0",
 		"mocha": "3.2.0",
 		"spectron": "3.4.0"
@@ -112,6 +113,7 @@
 		"electron-is-dev": "^0.3.0",
 		"mime": "^1.4.0",
 		"rimraf": "2.6.1",
-		"tmp": "0.0.28"
+		"tmp": "0.0.28",
+		"zip": "^1.2.0"
 	}
 }

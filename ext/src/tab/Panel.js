@@ -324,7 +324,7 @@ Ext.define('Ext.tab.Panel', {
          *  - right
          */
         fullscreen : true,
-        tabPosition : 'bottom',
+        tabPosition : 'left',
 
 
         /**
