@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,700italic,700,500italic,500,400italic);
 @import 'loadscreen';
 
-$base-color: #2E658E;
+$base-color: #204675;
 $font-family: 'Roboto', sans-serif;
 $include-ie: false;
 $include-ff: false;
@@ -216,10 +216,28 @@ body {
 .allow-overflow .x-box-layout-ct, .allow-overflow .x-box-inner, .allow-overflow .x-box-item {
 	overflow: visible;
 }
+.x-tab-bar-body {
+    background-image: url(https://image.ibb.co/juubGx/fond.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.x-tab-default{box-shadow: 5px 6px 0px 1px !important;}
+.x-tab{box-shadow: 5px 6px 0px 1px !important;}
+.x-tab-default-top.x-tab-focus {
+    -webkit-box-shadow: 5px 6px 0px 1px !important;
+    box-shadow: 5px 6px 0px 1px !important;
+}
+.x-tab-default-top.x-tab-focus.x-tab-over {
+    -webkit-box-shadow: 5px 6px 0px 1px !important;
+    box-shadow: 5px 6px 0px 1px !important;
+}
 
 .x-tab-closable.x-badge[data-badge-text]:after {
 	right: 16px;
 }
+
+.x-tab{margin-left: -5px;}
 
 // Allow Glyphs in Action Columns
 .x-action-col-glyph {font-size:16px; line-height:16px; color:#CFCFCF; width:16px; margin: 0 5px;}
@@ -242,13 +260,13 @@ body {
 .service {
 	width: 230px;
 	display: inline-block;
-	padding: 10px;
+	padding: 5px;
 	cursor: pointer;
 	img {
 		float: left;
 	}
 	span {
-		margin-left: 10px;
+		margin-left: 5px;
 		line-height: 48px;
 	}
 	&:hover {

@@ -8,7 +8,7 @@
 /* Card Layout container */
 .x-grouptabcontainer {
     background-color: white;
-    border-top: 1px solid #d9d9d9 !important;    
+    border-top: 1px solid #d9d9d9 !important;
     border-bottom: 1px solid #d9d9d9 !important;
     border-right: 1px solid #d9d9d9 !important;
 }
@@ -27,7 +27,7 @@
 
 .x-grouptabbar .x-grid-row .x-grid-cell {
     background-color: transparent;
-    padding-left: 6px;
+    padding-left: 4px;
 }
 
 .x-grouptabbar .x-grid-cell-inner  {
@@ -43,7 +43,7 @@
     background-color: transparent;
     font-size: 12px;
     position: relative;
-    padding-left: 6px;
+    padding-left: 4px;
     padding-bottom: 2px;
     overflow: visible; /* To allow round corner blobs (.x-grouptabs-corner) to occlude the element border */
 }
@@ -60,7 +60,7 @@
     background-color: #EDEEF0;
 }
 
-.x-grouptabbar .x-tree-elbow-line, 
+.x-grouptabbar .x-tree-elbow-line,
 .x-grouptabbar .x-tree-elbow-empty {
     width: 0;
 }
