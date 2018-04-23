@@ -197,6 +197,7 @@ body {
 	background-image: linear-gradient(top, #ff1a1a,#e60000 3%,#b30000);
 	-webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0.1em 0.1em;
 	box-shadow: rgba(0, 0, 0, 0.3) 0 0.1em 0.1em;
+	transform: rotate(90deg);
 }
 
 .x-badge.green-badge[data-badge-text]:after {
@@ -249,6 +250,8 @@ body {
     padding: 6px 6px 6px 1px;
 }
 .x-tab{margin-left: -5px;}
+
+
 
 // Allow Glyphs in Action Columns
 .x-action-col-glyph {font-size:16px; line-height:16px; color:#CFCFCF; width:16px; margin: 0 5px;}

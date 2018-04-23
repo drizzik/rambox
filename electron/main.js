@@ -469,7 +469,7 @@ if ( config.get('proxy') ) {
 	app.on('login', (event, webContents, request, authInfo, callback) => {
 		if(!authInfo.isProxy)
 			return;
-			
+
 		event.preventDefault()
 		callback(config.get('proxyLogin'), config.get('proxyPassword'))
 	})

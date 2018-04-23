@@ -1,4 +1,7 @@
 var auth0, lock; // Auth0 vars
+const path = require('path');
+let flashPath = path.join(path.resolve(__dirname, '../'), '/app.asar.unpacked/plugins/');
+
 // Enable Cookies
 var ElectronCookies = require('@exponent/electron-cookies');
 ElectronCookies.enable({ origin: 'http://rambox.pro' });
@@ -13,8 +16,23 @@ Ext.application({
 	,autoCreateViewport: 'Rambox.view.main.Main'
 });
 
+process.argv.forEach(function (arg, index, array) {
+  if (arg === 'dev') {
+    flashPath = path.join(__dirname, '/plugins/');
+  }
+});
+
 // auto update logic
 const ipc = require('electron').ipcRenderer;
+require('electron-context-menu')();
+require('electron')();
+
+app.commandLine.appendSwitch('widevinecdmadapter.dll', '/plugins/widevinecdmadapter.dll');
+// The version of plugin can be got from `chrome://plugins` page in Chrome.
+app.commandLine.appendSwitch('widevine-cdm-version', '1.4.9.1070');
+app.commandLine.appendSwitch('ppapi-flash-path', path.join(flashPath, 'PepperFlashPlayer-win32.dll') );
+app.commandLine.appendSwitch('ppapi-flash-version', '21.0.0.216');
+
 ipc.on('showAbout', function(event, message) {
 	!Ext.cq1('about') ? Ext.create('Rambox.view.main.About') : '';
 });

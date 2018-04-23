@@ -229,6 +229,7 @@ Ext.define('Rambox.ux.WebView',{
 		if ( !me.record.get('enabled') ) return;
 
 		var webview = me.down('component').el.dom;
+		require('electron-context-menu')({window: webview});
 
 		// Google Analytics Event
 		ga_storage._trackEvent('Services', 'load', me.type, 1, true);
